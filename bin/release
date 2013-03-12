@@ -2,7 +2,7 @@
 # bin/release <build-dir>
 
 # Release Ruby First
-/usr/bin/env ruby release_ruby
+/usr/bin/env ruby $LP_DIR/release_ruby
 
 cat <<EOF
 ---

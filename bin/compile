@@ -8,7 +8,7 @@ set -e
 # set -x
 
 # Compile Ruby First
-/usr/bin/env ruby compile_ruby
+/usr/bin/env ruby $LP_DIR/compile_ruby
 
 # clean up leaking environment
 unset GIT_DIR
