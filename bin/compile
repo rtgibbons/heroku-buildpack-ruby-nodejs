@@ -172,3 +172,10 @@ echo "-----> Installing dependencies with npm"
 run_npm "install --production"
 run_npm "rebuild"
 echo "Dependencies installed" | indent
+
+if [ -f $BUILD_DIR/Gruntfile.js ] || [ -f $BUILD_DIR/Gruntfile.coffee ]; then
+  echo "-----> Running Grunt"
+  $BUILD_DIR/node_modules/bin/grunt
+else
+echo "-----> No Gruntfile.(js or coffee) found"
+fi
