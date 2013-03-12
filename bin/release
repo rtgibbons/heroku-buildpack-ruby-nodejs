@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
+# Release Ruby First
+/usr/bin/env ruby release_ruby
+
 cat <<EOF
 ---
 config_vars:
