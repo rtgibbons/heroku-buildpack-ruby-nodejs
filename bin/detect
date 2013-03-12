@@ -2,8 +2,9 @@
 # bin/detect <build-dir>
 
 # Detect Ruby First
+BUILD_DIR=$1
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
-/usr/bin/env ruby $LP_DIR/bin/detect_ruby
+/usr/bin/env ruby $LP_DIR/bin/detect_ruby $BUILD_DIR
 
 if [ -f $1/package.json ]; then
   echo "Node.js" && exit 0

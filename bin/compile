@@ -20,7 +20,7 @@ CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 # Compile Ruby First
-/usr/bin/env ruby $LP_DIR/bin/compile_ruby
+/usr/bin/env ruby $LP_DIR/bin/compile_ruby $BUILD_DIR $CACHE_DIR
 
 function error() {
   echo " !     $*" >&2
