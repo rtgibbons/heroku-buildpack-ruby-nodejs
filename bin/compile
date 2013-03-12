@@ -5,7 +5,7 @@
 set -e
 
 # debug
-# set -x
+set -x
 
 # Compile Ruby First
 /usr/bin/env ruby $LP_DIR/compile_ruby
