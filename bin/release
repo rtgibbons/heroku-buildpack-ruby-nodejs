@@ -2,6 +2,7 @@
 # bin/release <build-dir>
 
 # Release Ruby First
+LP_DIR=`cd $(dirname $0); cd ..; pwd`
 /usr/bin/env ruby $LP_DIR/release_ruby
 
 cat <<EOF

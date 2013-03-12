@@ -7,9 +7,6 @@ set -e
 # debug
 set -x
 
-# Compile Ruby First
-/usr/bin/env ruby $LP_DIR/compile_ruby
-
 # clean up leaking environment
 unset GIT_DIR
 
@@ -21,6 +18,9 @@ S3_BUCKET="heroku-buildpack-nodejs"
 BUILD_DIR=$1
 CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
+
+# Compile Ruby First
+/usr/bin/env ruby $LP_DIR/compile_ruby
 
 function error() {
   echo " !     $*" >&2
